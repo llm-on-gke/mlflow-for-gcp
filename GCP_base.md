@@ -22,9 +22,9 @@ Create a service account and set its privileges (`owner` is easiest).
 - [Terraform approach (recommended)](GCP_terraform.md)
 - [Hands-on approach](GCP_hands_on.md)
 
-## Usage
+## Usage and tests
 
-In order to use the deployed `mlflow` you need:
+After Infrastructure Setup, in order to use the deployed `mlflow` you need:
 
 * browser access to the deployed `mlflow` (that is URL, username and password)
 * write access to the storage bucket (in order to save model artifacts)
@@ -38,14 +38,15 @@ locally for your project.
 #### Install client library
 
 You need to install `mlflow` library (use your project-preferred method).
+`pip install mlflow`
 
 #### Environment configuration
 
 Configure the following environment variables:
 
-* `MLFLOW_TRACKING_URI=https://<your cloud run deployment URL.a.run.app>`
-* `MLFLOW_TRACKING_USERNAME=<mlflow access username>`
-* `MLFLOW_TRACKING_PASSWORD=<mlflow access password>`
+* `MLFLOW_TRACKING_URI=https://<your cloud run deployment URL.a.run.app>` # from secrect manager
+* `MLFLOW_TRACKING_USERNAME=<mlflow access username>` # from secret manager
+* `MLFLOW_TRACKING_PASSWORD=<mlflow access password>` # from secret manager
 * `MLFLOW_EXPERIMENT_NAME=my_little_pony` - the name of your experiment (needs to be created beforehand - through web UI or `mlflow` CLI).
 
 ### Storage bucket access
