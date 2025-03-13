@@ -17,7 +17,7 @@ resource "google_secret_manager_secret" "mlflow_artifact_url" {
   secret_id = "mlflow_artifact_url"
   project   = var.project_name
   replication {
-    automatic = true
+     auto {}
   }
 }
 
