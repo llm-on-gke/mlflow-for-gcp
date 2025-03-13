@@ -15,4 +15,5 @@ terraform {
 provider "google" {
   region  = var.region
   project = var.project_name
+  required_version = ">= 6.0"
 }

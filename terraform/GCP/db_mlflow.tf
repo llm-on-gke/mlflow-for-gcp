@@ -44,9 +44,9 @@ resource "random_password" "db_password_ml_flow" {
 resource "google_secret_manager_secret" "db_password_ml_flow" {
   secret_id = "mlflow_tracking_password"
   project   = var.project_name
-  #replication {
-  #  auto {}
-  #}
+  replication {
+    auto {}
+  }
 }
 
 resource "google_secret_manager_secret_version" "ml-flow-pass-version-basic" {
@@ -60,9 +60,9 @@ resource "google_secret_manager_secret_version" "ml-flow-pass-version-basic" {
 resource "google_secret_manager_secret" "mlflow_database_url" {
   secret_id = "mlflow_database_url"
   project   = var.project_name
-  #replication {
-  #  auto {}
-  #}
+  replication {
+    auto {}
+  }
 }
 
 resource "google_secret_manager_secret_version" "mlflow_database_url-version-basic" {
