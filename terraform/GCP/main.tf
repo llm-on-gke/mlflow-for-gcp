@@ -5,10 +5,10 @@ terraform {
       version = "4.58.0"
     }
   }
-  backend "gcs" {
-    bucket = "example-for-terraform-mlflow"
-    prefix = "terraform/state"
-  }
+  #backend "gcs" {
+  #  bucket = "example-for-terraform-mlflow"
+  #  prefix = "terraform/state"
+  #}
   required_version = ">= 1.5"
 }
 

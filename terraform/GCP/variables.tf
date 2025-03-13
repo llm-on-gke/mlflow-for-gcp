@@ -4,7 +4,7 @@ variable "env" {
 }
 
 variable "project_name" {
-  default     = "test-ml-flow-terraform"
+  default     = "northam-ce-mlai-tpu"
   description = "Full name of the project"
 }
 
@@ -24,6 +24,6 @@ variable "image_name" {
 }
 
 variable "bucket_users_list" {
-  default     = [rickruguichen@google.com]
+  default     = []
   description = "List of users "
 }
