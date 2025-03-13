@@ -2,7 +2,7 @@ terraform {
   required_providers {
     google = {
       source  = "hashicorp/google"
-      version = "4.58.0"
+      version = "6.0.0"
     }
   }
   #backend "gcs" {
@@ -15,5 +15,5 @@ terraform {
 provider "google" {
   region  = var.region
   project = var.project_name
-  required_version = ">= 6.0"
+  #required_version = ">= 6.0"
 }
