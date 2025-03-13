@@ -42,23 +42,14 @@ The docker images are going to be pushed to Artifact Registry inside your GCP pr
 Setup *docker* auth once:
 
 ```sh
-gcloud auth configure-docker europe-west2-docker.pkg.dev
+gcloud auth configure-docker yourregion-docker.pkg.dev
 ```
 
 build imagine :
 
 ```sh
-docker build -t mlflow-gcp .
-```
-
-tag :
-```sh
-docker tag mlflow-gcp europe-west2-docker.pkg.dev/test-ml-flow-terraform/test-ml-flow-terraform-repo/mlflow-imagine:latest
-```
-
-and push :
-```sh
-docker push europe-west2-docker.pkg.dev/test-ml-flow-terraform/test-ml-flow-terraform-repo/mlflow-imagine:latest
+cd $HOME/mlflow-for-gcp/GCP
+gcloud builds submit . --region=yourregion
 ```
 
 ## Start terraform deployment
