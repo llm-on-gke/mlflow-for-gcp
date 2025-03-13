@@ -1,5 +1,5 @@
 variable "env" {
-  default     = "prod"
+  default     = "dev"
   description = "Name of the environment"
 }
 
@@ -14,7 +14,7 @@ variable "vpn_to_access_db" {
 }
 
 variable "region" {
-  default     = "europe-west2"
+  default     = "us-east1"
   description = "GCP region that will be used for the project"
 }
 
@@ -24,6 +24,6 @@ variable "image_name" {
 }
 
 variable "bucket_users_list" {
-  default     = []
+  default     = [rickruguichen@google.com]
   description = "List of users "
 }
