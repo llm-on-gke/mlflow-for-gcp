@@ -5,6 +5,3 @@ This repository contains code that will let you build Ml Flow on either GCP or A
 ## [Ml Flow + GCP](GCP_base.md)
 Main elements used : CloudRun, CloudSQL and bucket.
 
-
-## [Ml Flow + AWS](AWS_terraform.md)
-Main elements used : ECS, RDS and S3
